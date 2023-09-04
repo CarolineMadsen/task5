@@ -1,0 +1,49 @@
+---
+const { title, description, price, img, icon, status } = Astro.props;
+---
+
+<article>
+  <div class="image">
+    <img src={`src/assets/images/${img}`} alt={title} />
+  </div>
+  <div class="flexColum">
+    <div class="titlePrice">
+      <h3>{title}</h3>
+      <h3>{price}</h3>
+    </div>
+    <p>{description}</p>
+
+    <div class="iconView">
+      <div>
+        {icon}
+        {status}
+      </div>
+      <a href="">View product</a>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    border: var(--border-size-1) solid var(--gray-5);
+  }
+  .image {
+    max-width: var(--size-12);
+  }
+  .titlePrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .iconView {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .flexColum {
+    margin: var(--size-1);
+  }
+</style>

@@ -1,15 +1,47 @@
 ---
+import Card from "../components/Card.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Biler Components</h1>
+    <main>
+      <Card
+        img="test.jpg"
+        title="Micro Backpack"
+        description="Lorem vgaenbv kjdzf nvm DAmnc abns cbna cdbnZ"
+        price="$90.00"
+        icon="Stig til billede"
+      />
+      <Card
+        img="test-2.jpg"
+        title="Nnasnc "
+        description="Lorem vgaenbv kjdzf nvm DAmnc abns cbna cdbnZ"
+        price="$80.00"
+        status="Pending"
+        icon="Stig til billede"
+      />
+    </main>
+  </body>
 </html>
+
+<style>
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--size-12);
+  }
+</style>
